@@ -1,0 +1,14 @@
+<h1>Updated Post</h1>
+<form action="/post/update/<%= post._id%>" method="post">  
+    <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
+    <input type="text" name="title" id="name" placeholder=" Enter title" value="<%=post.title%>" required/>
+    <br></br>
+    <label id="icon" for="name"><i class="fas fa-user"></i></label>
+    <input type="text" name="body" id="name" placeholder="Enter body" value="<%=post.body%>"required/>
+    <br></br>
+    <div class="btn-block">
+      <button class="btn btn-lg btn-primary btn-block" 
+      type="submit" value="update post">Update Post</button>
+    </div>
+
+</form>

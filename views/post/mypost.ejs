@@ -1,0 +1,26 @@
+<h1>My posts</h1>
+<a href="/post/createpost">Add New Post</a>
+
+<table>
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>body</th>
+        <th>photo</th>
+        <th>postedBy</th>
+        <th>date</th>
+      </tr>
+    </thead>
+  
+    <tr>
+      <% posts.forEach ((post)=>{ %>
+      <td><%=post.title%></td>
+      <td><%=post.body%></td>
+      <td><%=post.photo%></td>
+      <td><%=post.postedBy%></td>
+      <td><%=post.date%></td>
+      <td> <a href="/post/edit/<%=post._id%>">Edit Post</a></td>
+      <td> <a href="/post/delete/<%=post._id%>">delete Post</a></td>
+    </tr> 
+    <% }) %>
+  </table>
